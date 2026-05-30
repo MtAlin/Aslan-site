@@ -16,7 +16,8 @@ const BooksSection = () => {
           Cărți Celebre
         </h2>
         <p className="font-body text-lg text-muted-foreground max-w-2xl mx-auto mb-14">
-          Descoperă o colecție bogată de cărți care inspiră, educă și transformă vieți.
+          Descoperă o colecție bogată de cărți care inspiră, educă și transformă
+          vieți.
         </p>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto mb-14">
@@ -27,7 +28,7 @@ const BooksSection = () => {
               className="group flex flex-col bg-card border border-border rounded-2xl overflow-hidden hover:border-primary/40 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 text-left"
             >
               {/* Cover Image */}
-              <div className="relative aspect-[3/4.5] overflow-hidden bg-muted">
+              <div className="relative overflow-hidden bg-muted h-52 md:h-[250px]">
                 <img
                   src={book.coverImage}
                   alt={book.title}
@@ -48,13 +49,19 @@ const BooksSection = () => {
                   {book.title}
                 </h3>
                 <p className="font-body text-sm text-muted-foreground mb-3">
-                  de <span className="font-semibold text-foreground">{book.author}</span>
+                  de{" "}
+                  <span className="font-semibold text-foreground">
+                    {book.author}
+                  </span>
                 </p>
 
                 {/* Star Rating */}
                 <div className="flex gap-0.5 mb-4">
                   {[...Array(book.rating)].map((_, i) => (
-                    <Star key={i} className="w-3.5 h-3.5 fill-warm-gold text-warm-gold" />
+                    <Star
+                      key={i}
+                      className="w-3.5 h-3.5 fill-warm-gold text-warm-gold"
+                    />
                   ))}
                 </div>
 
