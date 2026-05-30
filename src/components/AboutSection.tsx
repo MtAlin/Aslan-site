@@ -2,9 +2,21 @@ import aboutImage from "@/assets/about-library.jpg";
 import { BookOpen, Users, Heart } from "lucide-react";
 
 const features = [
-  { icon: BookOpen, title: "Peste 1000 de Cărți", desc: "Colecție diversificată pentru toate vârstele" },
-  { icon: Users, title: "Cursuri Educaționale", desc: "Programe pentru copii, tineri și familii" },
-  { icon: Heart, title: "Valori Creștine", desc: "Fundație solidă pentru un viitor de succes" },
+  {
+    icon: BookOpen,
+    title: "Peste 1000 de Cărți",
+    desc: "Colecție diversificată pentru toate vârstele",
+  },
+  {
+    icon: Users,
+    title: "Cursuri Educaționale",
+    desc: "Programe pentru copii, tineri și familii",
+  },
+  {
+    icon: Heart,
+    title: "Valori Creștine",
+    desc: "Fundație solidă pentru un viitor de succes",
+  },
 ];
 
 const AboutSection = () => {
@@ -21,19 +33,28 @@ const AboutSection = () => {
               <span className="text-gradient-warm">viitor de succes</span>
             </h2>
             <p className="font-body text-lg text-muted-foreground mb-8 leading-relaxed">
-              Biblioteca Aslan și Centrul Educațional este un loc special dedicat comunității, 
-              unde copiii, tinerii și familiile pot descoperi bucuria lecturii, pot participa la 
-              cursuri educaționale gratuite și pot crește într-un mediu bazat pe valori creștine autentice.
+              Biblioteca Aslan și Centrul Educațional este un loc special
+              dedicat comunității, unde copiii, tinerii și familiile pot
+              descoperi bucuria lecturii, pot participa la cursuri educaționale
+              gratuite și pot crește într-un mediu bazat pe valori creștine
+              autentice.
             </p>
             <div className="grid gap-4">
               {features.map((f) => (
-                <div key={f.title} className="flex items-start gap-4 p-4 rounded-xl bg-card/80 border border-border">
+                <div
+                  key={f.title}
+                  className="flex items-start gap-4 p-4 rounded-xl bg-card/80 border border-border"
+                >
                   <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
                     <f.icon className="w-6 h-6 text-warm-gold" />
                   </div>
                   <div>
-                    <h3 className="font-display font-bold text-foreground">{f.title}</h3>
-                    <p className="font-body text-sm text-muted-foreground">{f.desc}</p>
+                    <h3 className="font-display font-bold text-foreground">
+                      {f.title}
+                    </h3>
+                    <p className="font-body text-sm text-muted-foreground">
+                      {f.desc}
+                    </p>
                   </div>
                 </div>
               ))}
@@ -49,7 +70,7 @@ const AboutSection = () => {
               />
             </div>
             <div className="absolute -bottom-6 -left-6 w-32 h-32 rounded-2xl bg-primary/20 -z-10" />
-            <div className="absolute -top-6 -right-6 w-24 h-24 rounded-full bg-sky-blue/30 -z-10" />
+            {/* <div className="absolute -top-6  w-24 h-24 rounded-full bg-sky-blue/30 -z-10" /> */}
           </div>
         </div>
       </div>

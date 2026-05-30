@@ -1,6 +1,15 @@
 import Navbar from "@/components/Navbar";
 import FooterSection from "@/components/FooterSection";
-import { ArrowLeft, BookOpen, Star, Calendar, Globe, Hash, Clock, CheckCircle } from "lucide-react";
+import {
+  ArrowLeft,
+  BookOpen,
+  Star,
+  Calendar,
+  Globe,
+  Hash,
+  Clock,
+  CheckCircle,
+} from "lucide-react";
 import { Link, useParams, Navigate } from "react-router-dom";
 import { booksData } from "@/data/books";
 
@@ -32,7 +41,7 @@ const BookPage = () => {
           <div className="grid md:grid-cols-3 gap-12 items-start bg-card border border-border rounded-3xl p-6 md:p-10 shadow-xl">
             {/* Book Cover (Left Column) */}
             <div className="md:col-span-1 space-y-6">
-              <div className="relative aspect-[3/4.5] rounded-2xl overflow-hidden shadow-2xl border border-border group">
+              <div className="relative h-52 rounded-2xl overflow-hidden shadow-2xl border border-border group">
                 <img
                   src={book.coverImage}
                   alt={book.title}
@@ -54,7 +63,9 @@ const BookPage = () => {
                     <Hash className="w-4 h-4 text-warm-orange" />
                     <span>Pagini</span>
                   </div>
-                  <span className="font-bold text-foreground">{book.pages}</span>
+                  <span className="font-bold text-foreground">
+                    {book.pages}
+                  </span>
                 </div>
                 <div className="flex items-center justify-between text-sm">
                   <div className="flex items-center gap-2 text-muted-foreground">
@@ -68,7 +79,9 @@ const BookPage = () => {
                     <Globe className="w-4 h-4 text-warm-orange" />
                     <span>Limba</span>
                   </div>
-                  <span className="font-bold text-foreground">{book.language}</span>
+                  <span className="font-bold text-foreground">
+                    {book.language}
+                  </span>
                 </div>
               </div>
             </div>
@@ -83,14 +96,20 @@ const BookPage = () => {
                   {book.title}
                 </h1>
                 <p className="font-display text-xl md:text-2xl text-muted-foreground">
-                  de <span className="font-bold text-foreground">{book.author}</span>
+                  de{" "}
+                  <span className="font-bold text-foreground">
+                    {book.author}
+                  </span>
                 </p>
               </div>
 
               {/* Star Rating */}
               <div className="flex items-center gap-1">
                 {[...Array(book.rating)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 fill-warm-gold text-warm-gold" />
+                  <Star
+                    key={i}
+                    className="w-5 h-5 fill-warm-gold text-warm-gold"
+                  />
                 ))}
                 <span className="text-sm font-semibold text-muted-foreground ml-2">
                   5.0 (Recenzie Bibliotecă)
@@ -101,7 +120,9 @@ const BookPage = () => {
 
               {/* Book Descriptions */}
               <div className="space-y-4">
-                <h3 className="font-display font-bold text-lg text-foreground">Despre această carte</h3>
+                <h3 className="font-display font-bold text-lg text-foreground">
+                  Despre această carte
+                </h3>
                 <p className="font-body text-base text-muted-foreground leading-relaxed">
                   {book.fullDesc}
                 </p>
@@ -111,9 +132,13 @@ const BookPage = () => {
               <div className="flex items-start gap-4 p-5 rounded-2xl bg-primary/5 border border-primary/20">
                 <Clock className="w-6 h-6 text-warm-orange flex-shrink-0 mt-0.5" />
                 <div>
-                  <h4 className="font-display font-bold text-sm text-foreground">Împrumut Gratuit timp de 30 de zile</h4>
+                  <h4 className="font-display font-bold text-sm text-foreground">
+                    Împrumut Gratuit timp de 30 de zile
+                  </h4>
                   <p className="font-body text-xs text-muted-foreground mt-1 leading-relaxed">
-                    Poți împrumuta această carte fără niciun cost. Vizitează-ne la sediu sau trimite o solicitare de înscriere gratuită direct de pe site.
+                    Poți împrumuta această carte fără niciun cost. Vizitează-ne
+                    la sediu sau trimite o solicitare de înscriere gratuită
+                    direct de pe site.
                   </p>
                 </div>
               </div>

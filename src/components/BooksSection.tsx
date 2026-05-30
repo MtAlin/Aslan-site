@@ -28,7 +28,7 @@ const BooksSection = () => {
               className="group flex flex-col bg-card border border-border rounded-2xl overflow-hidden hover:border-primary/40 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 text-left"
             >
               {/* Cover Image */}
-              <div className="relative overflow-hidden bg-muted h-52 md:h-[250px]">
+              <div className="relative overflow-hidden bg-muted h-52 ">
                 <img
                   src={book.coverImage}
                   alt={book.title}

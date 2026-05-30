@@ -26,7 +26,8 @@ const BooksPage = () => {
               Cărți și Autori Celebri
             </h1>
             <p className="font-body text-lg text-muted-foreground max-w-2xl mx-auto">
-              Explorează întreaga noastră colecție de autori care au marcat istoria literaturii și a credinței.
+              Explorează întreaga noastră colecție de autori care au marcat
+              istoria literaturii și a credinței.
             </p>
           </div>
 
@@ -38,7 +39,7 @@ const BooksPage = () => {
                 className="group flex flex-col bg-card border border-border rounded-2xl overflow-hidden hover:border-primary/40 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300"
               >
                 {/* Book Cover Image Container */}
-                <div className="relative aspect-[3/4.5] overflow-hidden bg-muted">
+                <div className="relative overflow-hidden bg-muted h-52 ">
                   <img
                     src={book.coverImage}
                     alt={book.title}
@@ -46,7 +47,9 @@ const BooksPage = () => {
                     loading="lazy"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                    <span className="font-display font-bold text-sm text-white">Vezi detalii carte →</span>
+                    <span className="font-display font-bold text-sm text-white">
+                      Vezi detalii carte →
+                    </span>
                   </div>
                   <span className="absolute top-3 right-3 bg-emerald-500 text-white px-2.5 py-1 rounded-full font-display font-bold text-[10px] uppercase tracking-wider shadow">
                     {book.availability}
@@ -62,13 +65,19 @@ const BooksPage = () => {
                     {book.title}
                   </h3>
                   <p className="font-body text-sm text-muted-foreground mb-3">
-                    de <span className="font-semibold text-foreground">{book.author}</span>
+                    de{" "}
+                    <span className="font-semibold text-foreground">
+                      {book.author}
+                    </span>
                   </p>
-                  
+
                   {/* Rating Stars */}
                   <div className="flex gap-0.5 mb-4">
                     {[...Array(book.rating)].map((_, i) => (
-                      <Star key={i} className="w-3.5 h-3.5 fill-warm-gold text-warm-gold" />
+                      <Star
+                        key={i}
+                        className="w-3.5 h-3.5 fill-warm-gold text-warm-gold"
+                      />
                     ))}
                   </div>
 
