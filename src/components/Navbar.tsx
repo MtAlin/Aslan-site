@@ -27,13 +27,13 @@ const Navbar = () => {
           </span> */}
 
           <img
-            src="/logo.png"
+            src="../assets/logo.png"
             alt="Biblioteca Aslan Logo"
             className="w-10 h-10 object-contain transition-transform group-hover:scale-110"
           />
-          <span className="font-display font-bold text-xl text-foreground">
+          {/* <span className="font-display font-bold text-xl text-foreground">
             Biblioteca <span className="text-warm-gold">Aslan</span>
-          </span>
+          </span> */}
         </Link>
 
         {/* Desktop */}
