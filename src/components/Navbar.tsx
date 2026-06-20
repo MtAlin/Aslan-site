@@ -28,7 +28,7 @@ const Navbar = () => {
           </span> */}
 
           <img
-            src=${Logo}
+            src={Logo}
             alt="Biblioteca Aslan Logo"
             className="w-10 h-10 object-contain transition-transform group-hover:scale-110"
           />
