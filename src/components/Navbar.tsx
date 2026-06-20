@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { BookOpen, Menu, X } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
-import Logo from "@/assets/logo.png";
+import Logo from "@/assets/logo1.png";
 
 const navLinks = [
   { label: "Acasă", href: "/" },
@@ -30,7 +30,7 @@ const Navbar = () => {
           <img
             src={Logo}
             alt="Biblioteca Aslan Logo"
-            className="w-30 h-15 object-contain transition-transform group-hover:scale-110"
+            className="w-[110px] h-[60px] object-contain transition-transform group-hover:scale-110"
           />
           {/* <span className="font-display font-bold text-xl text-foreground">
             Biblioteca <span className="text-warm-gold">Aslan</span>
