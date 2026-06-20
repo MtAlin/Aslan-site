@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { BookOpen, Menu, X } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
-import { Logo } from "../assets/logo.png";
+import Logo from "@/assets/logo.png";
 
 const navLinks = [
   { label: "Acasă", href: "/" },
