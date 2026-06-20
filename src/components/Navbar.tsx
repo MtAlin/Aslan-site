@@ -1,4 +1,5 @@
-import { useState } from "react";
+/* @jsxRuntime classic */
+import React, { useState } from "react";
 import { BookOpen, Menu, X } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import Logo from "@/assets/logo1.png";
@@ -30,7 +31,7 @@ const Navbar = () => {
           <img
             src={Logo}
             alt="Biblioteca Aslan Logo"
-            className="w-[110px] h-[50px] object-contain transition-transform group-hover:scale-110"
+            className="w-[70px] md:w-[110px] h-[50px] object-contain transition-transform group-hover:scale-110"
           />
           {/* <span className="font-display font-bold text-xl text-foreground">
             Biblioteca <span className="text-warm-gold">Aslan</span>
