@@ -21,7 +21,16 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-md border-b border-border">
       <div className="container mx-auto px-4 flex items-center justify-between h-16">
         <Link to="/" className="flex items-center gap-2 group">
-          <BookOpen className="w-8 h-8 text-warm-gold transition-transform group-hover:scale-110" />
+          {/* <BookOpen className="w-8 h-8 text-warm-gold transition-transform group-hover:scale-110" />
+          <span className="font-display font-bold text-xl text-foreground">
+            Biblioteca <span className="text-warm-gold">Aslan</span>
+          </span> */}
+
+          <img
+            src="/logo.png"
+            alt="Biblioteca Aslan Logo"
+            className="w-10 h-10 object-contain transition-transform group-hover:scale-110"
+          />
           <span className="font-display font-bold text-xl text-foreground">
             Biblioteca <span className="text-warm-gold">Aslan</span>
           </span>
