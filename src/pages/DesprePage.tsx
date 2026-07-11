@@ -47,28 +47,6 @@ const DesprePage = () => {
   return (
     <div className="min-h-screen">
       <Navbar />
-
-      {/* Hero */}
-      {/* <section className="relative h-[50vh] min-h-[400px] flex items-end overflow-hidden">
-        <img
-          src={aboutImage}
-          alt="Interiorul Bibliotecii Aslan"
-          className="absolute inset-0 w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-hero-overlay" />
-        <div className="relative z-10 container mx-auto px-4 pb-12">
-          <Link
-            to="/"
-            className="inline-flex items-center gap-2 font-display font-bold text-sm text-white/80 hover:text-white transition-colors mb-4"
-          >
-            <ArrowLeft className="w-4 h-4" />
-            Înapoi acasă
-          </Link>
-          <h1 className="font-display font-black text-3xl md:text-5xl text-white">
-            Despre Noi
-          </h1>
-        </div>
-      </section> */}
       {/* Hero Banner */}
       <section className="pt-28 pb-16 bg-warm-gradient">
         <div className="container mx-auto px-4">
@@ -97,49 +75,6 @@ const DesprePage = () => {
               un spațiu cald unde comunitatea se poate aduna, învăța și inspira
               împreună.
             </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Intro */}
-      {/* <section className="py-16 bg-background">
-        <div className="container mx-auto px-4 max-w-4xl">
-          <span className="inline-block font-display font-bold text-sm text-warm-orange uppercase tracking-widest mb-4">
-            Cine Suntem
-          </span>
-          <h2 className="font-display font-black text-3xl md:text-4xl text-foreground mb-6 leading-tight">
-            O bună educație e fundația pentru un{" "}
-            <span className="text-gradient-warm">viitor de succes</span>
-          </h2>
-          <p className="font-body text-lg text-muted-foreground leading-relaxed mb-6">
-            Biblioteca Aslan și Centrul Educațional este un loc special dedicat
-            comunității din Târgoviște, unde copiii, tinerii și familiile pot
-            descoperi bucuria lecturii, pot participa la cursuri educaționale
-            gratuite și pot crește într-un mediu bazat pe valori creștine
-            autentice.
-          </p>
-          <p className="font-body text-lg text-muted-foreground leading-relaxed">
-            Ne-am născut din dorința de a pune cărțile la îndemâna tuturor,
-            indiferent de situația materială, și de a crea un spațiu cald unde
-            comunitatea se poate aduna, învăța și inspira împreună.
-          </p>
-        </div>
-      </section> */}
-
-      {/* Stats */}
-      <section className="py-12 bg-warm-gradient">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 max-w-4xl mx-auto">
-            {stats.map((stat) => (
-              <div key={stat.label} className="text-center">
-                <p className="font-display font-black text-4xl md:text-5xl text-warm-orange mb-2">
-                  {stat.value}
-                </p>
-                <p className="font-body text-sm text-muted-foreground">
-                  {stat.label}
-                </p>
-              </div>
-            ))}
           </div>
         </div>
       </section>
@@ -176,6 +111,24 @@ const DesprePage = () => {
                     {f.desc}
                   </p>
                 </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Stats */}
+      <section className="py-12 bg-warm-gradient">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 max-w-4xl mx-auto">
+            {stats.map((stat) => (
+              <div key={stat.label} className="text-center">
+                <p className="font-display font-black text-4xl md:text-5xl text-warm-orange mb-2">
+                  {stat.value}
+                </p>
+                <p className="font-body text-sm text-muted-foreground">
+                  {stat.label}
+                </p>
               </div>
             ))}
           </div>
