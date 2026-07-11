@@ -83,8 +83,8 @@ const DesprePage = () => {
             <span className="inline-block font-display font-bold text-sm text-warm-orange uppercase tracking-widest mb-4">
               Cine Suntem
             </span>
-            <h1 className="font-display font-black text-3xl md:text-4xl text-foreground mb-6 leading-tight">
-              O bună educație e fundația pentru un{" "}
+            <h1 className="font-display font-black text-3xl md:text-5xl lg:text-6xl text-foreground mb-4">
+              O bună educație e fundația pentru un <br />
               <span className="text-gradient-warm">viitor de succes</span>
             </h1>
             <p className="font-body text-lg text-muted-foreground max-w-2xl mx-auto">
