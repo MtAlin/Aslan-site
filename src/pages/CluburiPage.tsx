@@ -105,31 +105,6 @@ const CluburiPage = () => {
               tuturor.
             </p>
           </div>
-          {/* test */}
-          {/* <Link
-            to="/"
-            className="inline-flex items-center gap-2 font-display font-bold text-sm text-muted-foreground hover:text-foreground transition-colors mb-8"
-          >
-            <ArrowLeft className="w-4 h-4" />
-            Înapoi acasă
-          </Link>
-          <span className="inline-block font-display font-bold text-sm text-sky-blue uppercase tracking-widest mb-4">
-            Activități
-          </span>
-          <h1 className="font-display font-black text-4xl md:text-5xl lg:text-6xl text-foreground mb-6">
-            Cluburi & Activități
-          </h1>
-          <p className="font-body text-lg text-muted-foreground max-w-2xl mx-auto">
-            Alege activitatea care ți se potrivește și vino să faci parte din
-            comunitatea noastră! Toate cluburile sunt gratuite și deschise
-            tuturor.
-          </p> */}
-        </div>
-      </section>
-
-      {/* Clubs Grid */}
-      <section className="py-16 bg-background">
-        <div className="container mx-auto px-4">
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {clubs.map((club) => (
               <Link
