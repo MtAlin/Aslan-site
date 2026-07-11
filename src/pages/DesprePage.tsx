@@ -70,10 +70,7 @@ const DesprePage = () => {
               dedicat comunității din Târgoviște, unde copiii, tinerii și
               familiile pot descoperi bucuria lecturii, pot participa la cursuri
               educaționale gratuite și pot crește într-un mediu bazat pe valori
-              creștine autentice. Ne-am născut din dorința de a pune cărțile la
-              îndemâna tuturor, indiferent de situația materială, și de a crea
-              un spațiu cald unde comunitatea se poate aduna, învăța și inspira
-              împreună.
+              creștine autentice.
             </p>
           </div>
         </div>
