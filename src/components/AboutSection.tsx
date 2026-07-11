@@ -21,9 +21,12 @@ const features = [
 
 const AboutSection = () => {
   return (
-    <section id="despre" className="py-20 md:py-28 bg-warm-gradient">
+    <section
+      id="despre"
+      className="pt-12 pb-20 md:pt-12 md:pb-28 bg-warm-gradient"
+    >
       <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="grid md:grid-cols-2 gap-12 items-start">
           <div>
             <span className="inline-block font-display font-bold text-sm text-warm-orange uppercase tracking-widest mb-4">
               Despre Noi
@@ -60,7 +63,7 @@ const AboutSection = () => {
               ))}
             </div>
           </div>
-          <div className="relative">
+          <div className="relative md:pt-12">
             <div className="rounded-2xl overflow-hidden shadow-2xl">
               <img
                 src={aboutImage}
