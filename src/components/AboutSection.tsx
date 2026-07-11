@@ -4,7 +4,7 @@ import { BookOpen, Users, Heart } from "lucide-react";
 const features = [
   {
     icon: BookOpen,
-    title: "Peste 1000 de Cărți",
+    title: "Peste 2000 de Cărți",
     desc: "Colecție diversificată pentru toate vârstele",
   },
   {
