@@ -74,8 +74,8 @@ const ImprumutPage = () => {
               Cum Împrumuți o Carte?
             </h1>
             <p className="font-body text-lg text-muted-foreground max-w-2xl mx-auto">
-              Procesul este simplu, rapid și complet gratuit. Urmează acești pași și bucură-te de
-              lectură!
+              Procesul este simplu, rapid și complet gratuit. Urmează acești
+              pași și bucură-te de lectură!
             </p>
           </div>
         </div>
@@ -95,8 +95,12 @@ const ImprumutPage = () => {
                     {s.step}
                   </span>
                 </div>
-                <h3 className="font-display font-bold text-lg text-foreground mb-2">{s.title}</h3>
-                <p className="font-body text-sm text-muted-foreground leading-relaxed">{s.desc}</p>
+                <h3 className="font-display font-bold text-lg text-foreground mb-2">
+                  {s.title}
+                </h3>
+                <p className="font-body text-sm text-muted-foreground leading-relaxed">
+                  {s.desc}
+                </p>
               </div>
             ))}
           </div>
@@ -141,23 +145,41 @@ const ImprumutPage = () => {
                 Vino sau sună-ne
               </h2>
               <p className="font-body text-muted-foreground mb-8 leading-relaxed">
-                Poți veni direct la bibliotecă sau ne poți contacta telefonic / prin email pentru
-                mai multe informații despre înscriere și programul nostru.
+                Poți veni direct la bibliotecă sau ne poți contacta telefonic /
+                prin email pentru mai multe informații despre înscriere și
+                programul nostru.
               </p>
               <div className="flex flex-col gap-5">
                 {[
-                  { icon: MapPin, label: "Adresă", value: "Class Park Residence, Târgoviște" },
-                  { icon: Clock, label: "Program", value: "Luni–Sâmbătă, 9:00–18:00" },
-                  { icon: Phone, label: "Telefon", value: "+40 XXX XXX XXX" },
-                  { icon: Mail, label: "Email", value: "contact@bibliotecaaslan.ro" },
+                  {
+                    icon: MapPin,
+                    label: "Adresă",
+                    value:
+                      "Str Madrid 2 F, Class Park Residence, Targoviste, Romania",
+                  },
+                  {
+                    icon: Clock,
+                    label: "Program",
+                    value: "Luni–Sâmbătă, 9:00–18:00",
+                  },
+                  { icon: Phone, label: "Telefon", value: "+40 778 785 593" },
+                  {
+                    icon: Mail,
+                    label: "Email",
+                    value: "contact@aslan.ro",
+                  },
                 ].map((item) => (
                   <div key={item.label} className="flex items-start gap-4">
                     <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
                       <item.icon className="w-5 h-5 text-warm-gold" />
                     </div>
                     <div>
-                      <p className="font-display font-bold text-sm text-foreground">{item.label}</p>
-                      <p className="font-body text-sm text-muted-foreground">{item.value}</p>
+                      <p className="font-display font-bold text-sm text-foreground">
+                        {item.label}
+                      </p>
+                      <p className="font-body text-sm text-muted-foreground">
+                        {item.value}
+                      </p>
                     </div>
                   </div>
                 ))}
@@ -170,7 +192,8 @@ const ImprumutPage = () => {
                 Înscrie-te Gratuit
               </h3>
               <p className="font-body text-sm text-muted-foreground mb-6">
-                Completează câmpurile de mai jos și te vom contacta în cel mai scurt timp.
+                Completează câmpurile de mai jos și te vom contacta în cel mai
+                scurt timp.
               </p>
               <div className="flex flex-col gap-4">
                 <div>

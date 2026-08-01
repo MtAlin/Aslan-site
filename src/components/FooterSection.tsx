@@ -96,6 +96,8 @@ const FooterSection = () => {
                 { social: Youtube, link: "#" },
               ].map((item, i) => (
                 <a
+                  target="_blank"
+                  rel="noopener noreferrer"
                   key={i}
                   href={item.link}
                   className="w-10 h-10 rounded-xl bg-background/10 flex items-center justify-center hover:bg-warm-gold/20 transition-colors"
