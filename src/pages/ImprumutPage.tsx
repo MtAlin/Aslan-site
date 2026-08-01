@@ -1,6 +1,15 @@
 import Navbar from "@/components/Navbar";
 import FooterSection from "@/components/FooterSection";
-import { MapPin, BookOpen, FileText, Clock, Phone, Mail, ArrowLeft, CheckCircle2 } from "lucide-react";
+import {
+  MapPin,
+  BookOpen,
+  FileText,
+  Clock,
+  Phone,
+  Mail,
+  ArrowLeft,
+  CheckCircle2,
+} from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 
 const steps = [
@@ -48,8 +57,8 @@ const ImprumutPage = () => {
   const queryParams = new URLSearchParams(location.search);
   const requestedBook = queryParams.get("book");
 
-  const defaultMessage = requestedBook 
-    ? `Doresc să împrumut cartea: "${requestedBook}"` 
+  const defaultMessage = requestedBook
+    ? `Doresc să împrumut cartea: "${requestedBook}"`
     : "";
 
   return (
@@ -186,7 +195,7 @@ const ImprumutPage = () => {
               </div>
             </div>
 
-            {/* Simple Contact Card */}
+            {/* Simple Contact Card - FUNCȚIONALĂ (FORMSUBMIT INTEGRAT) */}
             <div className="bg-card rounded-2xl border border-border p-8 shadow-lg">
               <h3 className="font-display font-bold text-2xl text-foreground mb-2">
                 Înscrie-te Gratuit
@@ -195,58 +204,84 @@ const ImprumutPage = () => {
                 Completează câmpurile de mai jos și te vom contacta în cel mai
                 scurt timp.
               </p>
-              <div className="flex flex-col gap-4">
+
+              {/* MODIFICAT: Tag-ul <form> cu endpoint-ul de trimitere */}
+              <form
+                action="https://formsubmit.co/contact@aslan.ro"
+                method="POST"
+                className="flex flex-col gap-4"
+              >
+                {/* MODIFICAT: Setări ascunse (fără captcha, titlu e-mail) */}
+                <input type="hidden" name="_captcha" value="false" />
+                <input
+                  type="hidden"
+                  name="_subject"
+                  value="Cerere nouă împrumut - Biblioteca Aslan"
+                />
+
                 <div>
                   <label className="font-display font-bold text-sm text-foreground block mb-1.5">
-                    Nume complet
+                    Nume complet *
                   </label>
                   <input
                     type="text"
+                    name="Nume complet"
+                    required
                     placeholder="Ex: Ion Popescu"
                     className="w-full px-4 py-3 rounded-xl border border-border bg-background font-body text-sm focus:outline-none focus:ring-2 focus:ring-primary/50 transition"
                   />
                 </div>
+
                 <div>
                   <label className="font-display font-bold text-sm text-foreground block mb-1.5">
-                    Telefon
+                    Telefon *
                   </label>
                   <input
                     type="tel"
+                    name="Telefon"
+                    required
                     placeholder="Ex: 0712 345 678"
                     className="w-full px-4 py-3 rounded-xl border border-border bg-background font-body text-sm focus:outline-none focus:ring-2 focus:ring-primary/50 transition"
                   />
                 </div>
+
                 <div>
                   <label className="font-display font-bold text-sm text-foreground block mb-1.5">
                     Vârsta copilului (opțional)
                   </label>
                   <input
                     type="text"
+                    name="Vârsta copil"
                     placeholder="Ex: 12 ani"
                     className="w-full px-4 py-3 rounded-xl border border-border bg-background font-body text-sm focus:outline-none focus:ring-2 focus:ring-primary/50 transition"
                   />
                 </div>
+
                 <div>
                   <label className="font-display font-bold text-sm text-foreground block mb-1.5">
                     Mesaj (opțional)
                   </label>
                   <textarea
+                    name="Mesaj"
                     rows={3}
                     defaultValue={defaultMessage}
                     placeholder="Orice întrebare sau detaliu..."
                     className="w-full px-4 py-3 rounded-xl border border-border bg-background font-body text-sm focus:outline-none focus:ring-2 focus:ring-primary/50 transition resize-none"
                   />
                 </div>
+
+                {/* MODIFICAT: type="submit" trimite formularul */}
                 <button
-                  type="button"
+                  type="submit"
                   className="w-full bg-primary text-primary-foreground py-3.5 rounded-full font-display font-bold text-base hover:opacity-90 hover:scale-105 transition-all duration-200 shadow-md"
                 >
                   Trimite Cererea
                 </button>
+
                 <p className="font-body text-xs text-muted-foreground text-center">
                   Gratuitate garantată. Te contactăm în 24h.
                 </p>
-              </div>
+              </form>
             </div>
           </div>
         </div>
